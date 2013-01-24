@@ -1,0 +1,15 @@
+Package: highlight
+Type: Package
+Title: Syntax highlighter
+Version: 0.3.2
+Date: 2013-01-23
+Author: Romain Francois
+Maintainer: Dason Kurkiewicz <dasonk@iastate.edu>
+Description: Syntax highlighter for R code based on the results of the
+        R parser. Rendering in HTML and latex markup. Custom sweave
+        driver performing syntax highlighting of R code chunks
+License: GPL (>= 2)
+Depends: R (>= 2.13.0), tools, codetools, utils, parser (>= 0.0-10),
+        Rcpp (>= 0.9.6)
+LinkingTo: Rcpp
+RcppModules: highlight

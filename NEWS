@@ -1,0 +1,86 @@
+0.3.2   2013-01-22
+
+   o    Resurrected the package
+
+0.3.1   2011-12-05
+
+   o    Bug fix in the html renderer. Thanks to @tonybreyal for pointing out
+        the bug on twitter. 
+
+0.3.0   2011-11-27
+
+   o    Using sprintf instead of snprintf to make Solaris happy
+   
+   o    New R function external_highlight that uses the C++ code from Andre
+   Simon highlight library. The code is called directly, no more using a system 
+   dependency as before. 
+
+0.2-6   2010-04-11
+
+   o    small bug fixed in the latex renderer. Reported by Collin Gillepsie.
+
+0.2-5   2010-12-06
+
+   o    superfluous lines were added at the end of code chunks in the sweave
+        driver
+        
+   o    multiple lines character strings were not rendered properly by the
+        latex renderer
+
+0.2-3	2010-11-19
+
+   o	sweave blocks now respond to the size option, as in :
+   		<<size=footnotesize>>=
+   		and adapts the generated latex code accordingly
+
+0.2-1	2010-06-04
+
+   o	sweave code chunks can set prompt=FALSE to remove the prompt and continue
+   		prompt. <<eval=FALSE,prompt=FALSE>>=
+
+0.2-0	2010-05-31
+
+   o	The sweave driver accepts argument boxes, bg and border to control
+   		the appearance of the R code chunks
+   		
+   o	The sweave driver interprets code chunks like <<lang=foo>>= as source
+   		code in language foo and uses highlight (http://www.andre-simon.de/)
+   		to render the code if available
+
+0.1-9	2010-05-28
+
+   o	the latex renderer header added useless information
+   
+   o	The latex renderer gains a "minipage" argument that is passed
+   down to header and footer to include the resulting highlighted code
+   in a minipage environment
+
+0.1-8	2010-05-20
+
+   o	custom http handler to handle http request of the prefix
+   /custom/highlight/fun or /custom/highlight/package/fun 
+
+0.1-6	2010-02-13
+
+   o	Fixed latex rendering (initial line of input and output) was
+   	indented
+   
+0.1-5	2010-02-13
+
+   o 	Fixed handling of prompts
+
+   o	Added an example of how to debug a renderer. Suggestion by 
+	Gabor Grothendieck
+
+   o 	'highlight' now tests that parser.output is of class 'parser' to prevent
+	uses of the 'parse' function in place of 'parser'. Suggestion by
+	Hadley Wickham
+
+0.1-3	2009-11-22
+   o 	all headers and footers now include line feeds
+   
+   o 	headers and footers can now be NULL (no content)
+
+0.1-2	2009-11-20
+   o	initial release
+
